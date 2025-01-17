@@ -17,6 +17,9 @@ body{
 .dark-3{
     color: #727272;
 }
+.orange{
+    color: rgba(255, 144, 14, 1);
+}
 
 .primary-btn{
     width: 170px;
@@ -28,13 +31,17 @@ body{
     border-radius: 8px;
 }
 
+.none{
+    display: none;
+}
+
 
 /* /shared style include here / */
 
 
 /* Navbaar styling from here */
 
-.navbar,.banner{
+.navbar,.banner {
     max-width: 1400px;
     margin: 0px auto;
     text-align: center;
@@ -83,22 +90,103 @@ body{
 
 .banner-image{
     width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* main section styling */
+
+.main{
+    max-width: 1440px;
+    margin: 0px auto;
+ }
+
+ .primary-btn{
+width: 170px;
+height: 50px;
+color: aliceblue;
+padding:10px;
+background-color: rgba(255, 144, 14, 1);
+border: none;
+border-radius: 8px;
+}
+
+.section{
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+/* background-color: chartreuse; */
+margin-top: 40px;
+margin-bottom: 40px;
+padding: 20px;
+}
+
+.box-1{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 20px;
+border-radius: 10px;
+}
+
+.box-2{
+margin-left: 70px;
+width: 530px;
+}
+.dark-3{
+color: #727272;
+}
+.orange{
+color: rgba(255, 144, 14, 1);
+}
+
+.quick-heading{
+font-size: 2.2rem;
+font-weight: 500;
+}
+.des{
+font-weight: 500;
+font-style: normal;
+font-size: 1.2rem;
 }
 
 
 
-
-
-
-
-
-
-
-
-
+/* Smoll mobile device functionality */
 
 @media  screen and (max-width:576px) {
     .navbar{
         flex-direction: column;
+    }
+
+
+
+    .section{
+        flex-direction: column;
+    }
+    .box-1{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+   .box-2{
+    margin-left: 10px;
+    width: 330px;
+    }
+
+}
+
+/* medium device functionality */
+/* 
+@media screen and (max-width:576px) {
+
+} */
+
+
+@media screen and (min-width:576px) and (max-width:992px) {
+  .section{
+    flex-direction: column;
+  }  
+
+  .box-2{
+    margin: 50px auto;
     }
 }
